@@ -10,6 +10,11 @@ $(document).ready(function() {
  */
 function initializePage() {
 	console.log("Javascript connected!");
+	$('.friendname').click(function(event){
+		event.preventDefault();
+		var newName = anagrammedName($(this).text());
+		$(this).text(newName);
+	});
 }
 
 function anagrammedName(name) {
@@ -46,9 +51,4 @@ function anagrammedName(name) {
 }
 
 
-$('.friendlist').click(function(event){
-		event.preventDefault();
-		var newName = anagrammedName($(this).text());
-		$(this).text(newName);
-	}
-);
+
