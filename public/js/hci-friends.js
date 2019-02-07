@@ -44,3 +44,11 @@ function anagrammedName(name) {
 		return name;
 	}
 }
+
+
+$('.friendlist').click(function(event){
+		event.preventDefault();
+		var newName = anagrammedName($(this).text());
+		$(this).text(newName);
+	}
+);

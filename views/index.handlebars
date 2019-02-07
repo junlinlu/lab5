@@ -5,10 +5,27 @@
 	<title>My HCI Friends</title>	
 	<meta charset="utf-8">
 	
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.css" rel="stylesheet">
+	<link href="css/hci-friends.css" rel="stylesheet">
+	
+	<script src="js/jquery-1.11.0.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/hci-friends.js"></script>
+	
 </head>
 
 <body>
 	<h1>My HCI Friends</h1>
+	
+	{{#each friends}}
+		<div class="friendlist">
+			<h3><a href="#">{{name}}</a></h3>
+			<img class="img-responsive img-rounded" src={{imageURL}}></img>
+			<p>{{description}}</p>
+		</div>
+		<hr>
+	{{/each}}
 
 	<form id="addFriendForm" role="form" method="get" action="/add">
 		<h3>Add a friend</h3>
